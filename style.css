@@ -1,9 +1,18 @@
-/*--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+/*
+Theme Name: Services 4 Lawyers
+Theme URI: http://services4lawyer.services4you.com.br/layout/
+Author: Services 4 You
+Author URI: http://www.services4you.com.br/
+Description: Layout retirado do site w3layouts e voltado para área de advocacia, firmas de advocacia e advogados.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: services4lawyer
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 
 body a {
 	transition: 0.5s all;
@@ -71,7 +80,7 @@ a:hover {
 /*-- banner --*/
 
 .banner {
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+	background: url(images/1.jpg) no-repeat 0px 0px;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
@@ -174,7 +183,7 @@ a:hover {
 
 .agileinfo-dot,
 .agile-dot {
-	background: url(../images/dott.png)repeat 0px 0px;
+	background: url(images/dott.png)repeat 0px 0px;
 	background-size: 2px;
 	-webkit-background-size: 2px;
 	-moz-background-size: 2px;
@@ -439,7 +448,7 @@ ul.nav.navbar-nav li.active a {
 	text-decoration: none;
 	width: 56px;
 	height: 56px;
-	background: transparent url(../images/arrows.png) no-repeat left top;
+	background: transparent url(images/arrows.png) no-repeat left top;
 }
 
 .callbacks_nav.next {
@@ -843,7 +852,7 @@ i.fa.fa-paper-plane {
 }
 
 .w3ls-about-right-img {
-	background: url(../images/why.jpg) no-repeat 0px 0px;
+	background: url(images/why.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	min-height: 450px;
 }
@@ -856,7 +865,7 @@ i.fa.fa-paper-plane {
 /*-- //about --*/
 
 .why {
-	background: url(../images/4.jpg) no-repeat 0px 0px;
+	background: url(images/4.jpg) no-repeat 0px 0px;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
@@ -957,7 +966,7 @@ i.fa.fa-paper-plane {
 }
 
 .w3-agileits-services-left {
-	background: url(../images/3.jpg) no-repeat 0px 0px;
+	background: url(images/3.jpg) no-repeat 0px 0px;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	-moz-background-size: cover;
@@ -1162,7 +1171,7 @@ i.fa.fa-paper-plane {
 /*-- offer --*/
 
 .offer {
-	background: url(../images/4.jpg) no-repeat 0px 0px;
+	background: url(images/4.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -1249,7 +1258,7 @@ i.fa.fa-paper-plane {
 /*-- /consultation --*/
 
 .free_agile_consultaion_img {
-	background: url(../images/consultation.jpg) no-repeat 0px 0px;
+	background: url(images/consultation.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -1585,7 +1594,7 @@ ul.tag2:last-child {
 	height: 40px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/arrow.png) no-repeat 0px 0px;
+	background: url(images/arrow.png) no-repeat 0px 0px;
 }
 
 #toTopHover {
@@ -2206,7 +2215,7 @@ ul.tag2:last-child {
 	.callbacks_nav {
 		width: 35px;
 		height: 35px;
-		background: transparent url(../images/arrows.png) no-repeat left top;
+		background: transparent url(images/arrows.png) no-repeat left top;
 		background-size: 206%;
 	}
 	.w3-button {
