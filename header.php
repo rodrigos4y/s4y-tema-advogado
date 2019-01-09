@@ -16,15 +16,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!-- bootstrap-css -->
-	<link href="<? bloginfo('template_url') ?>/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<!--// bootstrap-css -->
-	<!-- css -->
-	<link rel="stylesheet" href="<? bloginfo('template_url') ?>/style.css" type="text/css" media="all" />
-	<!--// css -->
-	<!-- font-awesome icons -->
-	<link href="<? bloginfo('template_url') ?>/css/font-awesome.css" rel="stylesheet">
-	<!-- //font-awesome icons -->
+	
 	<!-- font -->
 	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <!-- //font -->

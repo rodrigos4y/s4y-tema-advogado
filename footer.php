@@ -33,7 +33,7 @@
 	</div>
 	<!-- //footer -->
 	<!-- //footer -->
-	<script src="<? bloginfo('template_url') ?>/js/jquery-2.1.4.min.js"></script>
+	<? wp_footer(); ?>
 	<script>
 		// You can also use "$(window).load(function() {"
 		$(function () {
@@ -74,10 +74,7 @@
 
 		});
 	</script>
-	<script src="<? bloginfo('template_url') ?>/js/responsiveslides.min.js"></script>
-	<script src="<? bloginfo('template_url') ?>/js/bars.js"></script>
-	<script src="<? bloginfo('template_url') ?>/js/jarallax.js"></script>
-	<script src="<? bloginfo('template_url') ?>/js/SmoothScroll.min.js"></script>
+
 	<script type="text/javascript">
 		/* init Jarallax */
 		$('.jarallax').jarallax({
@@ -86,8 +83,7 @@
 			imgHeight: 768
 		})
 	</script>
-	<script type="text/javascript" src="<? bloginfo('template_url') ?>/js/easing.js"></script>
-	<script type="text/javascript" src="<? bloginfo('template_url') ?>/js/move-top.js"></script>
+
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -117,9 +113,9 @@
 		});
 	</script>
 	<!-- //here ends scrolling icon -->
-    <script src="<? bloginfo('template_url') ?>/js/bootstrap.js"></script>
     
-    <? wp_footer(); ?>
+    
+    
 </body>
 
 </html>
