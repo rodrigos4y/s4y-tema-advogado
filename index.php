@@ -249,7 +249,7 @@
 				<div class="contact-left agileits-w3layouts free_w3ls_agile">
 					<input type="text" name="First Name" placeholder="First Name" required="">
 					<input class="email" name="Last Name" type="text" placeholder="Last Name" required="">
-					<input type="tel" name="Number" placeholder="Mobile Number" required="">
+					<input type="text" name="Number" placeholder="Mobile Number" required="">
 					<input class="email" name="Email" type="email" placeholder="Email" required="">
 					<select class="form-control">
 								<option>Practice Areas</option>
