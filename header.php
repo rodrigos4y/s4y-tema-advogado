@@ -47,15 +47,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav link-effect-4">
-							<li class="active"><a href="index.html" data-hover="Home">Home</a> </li>
-							<li><a href="#about" class="scroll">About </a> </li>
-							<li><a href="#features" class="scroll">Features </a> </li>
-							<li><a href="#services" class="scroll">Practice Areas</a> </li>
-							<li><a href="#news" class="scroll">News</a></li>
-							<li><a href="#team" class="scroll">Team</a></li>
-							<li><a href="#contact" class="scroll">Contact</a></li>
-						</ul>
+						<?
+							wp_nav_menu([
+								'theme_location' => 's4l_principal',
+								'container' => 'ul',
+								'menu_class' => 'nav navbar-nav'
+							])
+						?>
 					</div>
 					<!-- /.navbar-collapse -->
 				</div>
