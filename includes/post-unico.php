@@ -2,7 +2,11 @@
     <div class="col-sm-3 gallery-grids-left">
         <div class="gallery-grid">
             <a href="#">
-                    <img src="<? bloginfo('template_url') ?>/images/g1.jpg" alt="" />
+                <?
+                    if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('noticias-home');
+                    }
+                ?>
                     <div class="g-captn">
                         <h4>Legal Adviser</h4>
                         <p>12.Apr.2017</p>
