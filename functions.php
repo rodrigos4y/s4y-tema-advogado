@@ -1,6 +1,8 @@
 <?
     add_action('wp_enqueue_scripts', 's4l_add_script_cabecalho');
     add_action('wp_footer', 's4l_add_script_rodape');
+    add_theme_support('post-thumbnails');
+    add_image_size('noticias-home', 640, 426, true);
 
     function s4l_add_script_cabecalho(){
 
@@ -21,4 +23,6 @@
         wp_enqueue_script('move-top-s4l', get_stylesheet_directory_uri() . '/js/move-top.js');
         wp_enqueue_script('bootstrap-s4l', get_stylesheet_directory_uri() . '/js/bootstrap.js');
     }
+
+
 ?>
