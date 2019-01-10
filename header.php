@@ -65,51 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="slider">
 						<div class="callbacks_container">
 							<ul class="rslides callbacks callbacks1" id="slider4">
-								<li>
-									<div class="agileits-banner-info">
-										<h3>International
-											<div class="border"></div> <span>Law Firm</span></h3>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="#about" class="scroll hvr-shutter-out-vertical">About</a>
-											</div>
-											<div class="w3l-button">
-												<a href="#contact" class="scroll hvr-shutter-out-vertical">Contact</a>
-											</div>
-											<div class="clearfix"> </div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="agileits-banner-info">
-										<h3>Welcome
-											<div class="border"></div> <span>to the Legal Adviser</span></h3>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="#about" class="scroll hvr-shutter-out-vertical">About</a>
-											</div>
-											<div class="w3l-button">
-												<a href="#contact" class="scroll hvr-shutter-out-vertical">Contact</a>
-											</div>
-											<div class="clearfix"> </div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="agileits-banner-info">
-										<h3>International
-											<div class="border"></div> <span>Law Firm</span></h3>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="#about" class="scroll hvr-shutter-out-vertical">About</a>
-											</div>
-											<div class="w3l-button">
-												<a href="#contact" class="scroll hvr-shutter-out-vertical">Contact</a>
-											</div>
-											<div class="clearfix"> </div>
-										</div>
-									</div>
-								</li>
+								<? get_template_part('includes/loop', 'banner'); ?>
 							</ul>
 						</div>
 						<div class="clearfix"> </div>
