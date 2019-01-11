@@ -4,11 +4,11 @@ Theme URI: http://services4lawyer.services4you.com.br/layout/
 Author: Services 4 You
 Author URI: http://www.services4you.com.br/
 Description: Layout retirado do site w3layouts e voltado para área de advocacia, firmas de advocacia e advogados.
-Version: 1.0
+Version: 1.6.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: services4lawyer
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, post-formats, theme-options, threaded-comments
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -226,8 +226,7 @@ a:hover {
 	padding: 0;
 	font-size: 18px;
 	line-height: 20px;
-	position: absolute;
-    top: -5px;
+	
 }
 
 .navbar-nav {
@@ -1936,6 +1935,9 @@ ul.tag2:last-child {
 	}
 	.contact-info ul li:nth-child(2) {
 		margin: 1em 0;
+	}
+	.contact-info ul{
+		display: block;
 	}
 	.contact-info ul li {
 		width: 100%;
