@@ -2,6 +2,12 @@
     add_action('wp_enqueue_scripts', 's4l_add_script_cabecalho');
     add_action('wp_footer', 's4l_add_script_rodape');
     add_theme_support('post-thumbnails');
+    add_theme_support('custom-logo', [
+        'height' => 58,
+        'width' => 300,
+        'flex-width' => true,
+        'flex-height' => true
+    ]);
     add_image_size('noticias-home', 640, 426, true);
     add_action('init', 's4l_action_init');
 

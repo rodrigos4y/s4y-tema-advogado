@@ -319,8 +319,8 @@
 	<div class="contact" id="contact">
 		<div class="container">
 			<div class="about-heading">
-				<h3>Contact Us</h3>
-				<p>You Are Always One Step Ahead</p>
+				<h3>Contato</h3>
+				<p>Entre em contato conosco pelo formulário abaixo</p>
 			</div>
 			<div class="w3l-about-grids">
 				<div class="contact-info">

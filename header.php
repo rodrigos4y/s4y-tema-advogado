@@ -40,7 +40,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span class="icon-bar"></span>
 							  </button>
 						<div class="navbar-brand logo ">
-							<h1><a href="index.html"> Legal Adviser <i class="fa fa-balance-scale" aria-hidden="true"></i></a></h1>
+							<h1><a href="index.html">
+								<?php
+									if(function_exists('the_custom_logo')){
+										the_custom_logo();
+									}
+								?>
+							</a></h1>
 						</div>
 
 					</div>
