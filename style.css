@@ -1294,7 +1294,12 @@ i.fa.fa-paper-plane {
 .contact-w3ls-row {
 	margin-top: 3em;
 }
-
+.contact-info ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
 .contact-info ul li {
 	list-style: none;
 	display: inline-block;
@@ -1310,9 +1315,8 @@ i.fa.fa-paper-plane {
 	font-size: 2em;
 	color: #00acee;
 }
-
 .contact-info ul li:nth-child(2) {
-	margin: 0 11em;
+    margin: 0 ;
 }
 
 .contact-info {

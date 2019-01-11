@@ -157,4 +157,5 @@
     add_filter('wp_nav_menu','add_menuclass');
 
     require_once('post-area.php');
+    require_once('post-contato.php');
 ?>

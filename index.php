@@ -325,15 +325,7 @@
 			<div class="w3l-about-grids">
 				<div class="contact-info">
 					<ul>
-						<li><i class="fa fa-location-arrow" aria-hidden="true"></i>
-							<h5>Address<span>Honey 4, 8305, San Francisco</span></h5>
-						</li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i>
-							<h5>Call Us<span>+1 (100)222-0-33</span></h5>
-						</li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
-							<h5>Mail Us<span><a href="mailto:info@example.com">info@example.com</a></span></h5>
-						</li>
+						<? get_template_part('includes/loop', 'contato'); ?>
 					</ul>
 				</div>
 				<div class="contact-w3ls-row">
@@ -357,8 +349,7 @@
 	<!-- //contact -->
 	<!-- map -->
 	<div class="agileits-w3layouts-map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783"
-		    class="map" allowfullscreen=""></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3788702096513!2d-43.179631684418545!3d-22.899392443365667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5900b85987%3A0xd5eab2001cc29b78!2sRua+Visconde+de+Inhauma%2C+37+-+21+%C2%BA+andar+-+Centro%2C+Rio+de+Janeiro+-+RJ%2C+20091-007!5e0!3m2!1spt-BR!2sbr!4v1547213884365" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 	<!-- //map -->
 	<? get_footer(); ?>
