@@ -25,13 +25,17 @@
 		<div class="container">
 			<div class="w3l-about-grids_inner">
 				<div class="col-md-6 w3ls-about-left">
-					<h2>Welcome to the Legal Adviser</h2>
-					<h6>Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae.</h6>
-					<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. Nullam aliquam erat at lectus ullamcorper, nec interdum
-						neque hendrerit.Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae</p>
-					<p>Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. Nullam aliquam erat at lectus
-						ullamcorper, nec interdum neque hendrerit.</p>
-					<a href="#contact" class="scroll hvr-shutter-out-vertical">Contact</a>
+				<? 
+					$query = new WP_Query([
+						'post_type'   => 'sobre'
+					]);
+					while($query->have_posts()) : $query->the_post(); 
+
+				?>
+					<h2><? the_title(); ?></h2>
+					<? the_content(); ?>
+					<a href="#contact" class="scroll hvr-shutter-out-vertical">Entre em contato</a>
+					<? endwhile; ?>
 				</div>
 				<div class="col-md-6 w3ls-about-right">
 					<img src="<? bloginfo('template_url') ?>/images/ab.jpg" alt=" " class="img-responsive">
@@ -41,96 +45,12 @@
 		</div>
 	</div>
 	<!-- //about -->
-	<!-- about -->
-	<div class="why jarallax" id="features">
-		<div class="agile-dot">
-			<div class="container">
-				<div class="about-heading two">
-					<h3>Features</h3>
-					<p>You Are Always One Step Ahead</p>
-				</div>
-				<div class="w3l-about-grids">
-					<div class="col-md-4 w3ls-about-why-us-agile">
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Great Discount</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-heart" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Community Service</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-paper-plane" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Great Discount</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="col-md-4 w3ls-about-right">
-						<div class="w3ls-about-right-img">
-
-						</div>
-					</div>
-					<div class="col-md-4 w3ls-about-why-us-agile">
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Community Service</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-heart" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Great Discount</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-paper-plane" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Community Service</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //about -->
 	<!-- services -->
 	<div class="services" id="services">
 		<div class="container">
 			<div class="about-heading">
-				<h3>Practice Areas</h3>
-				<p>You Are Always One Step Ahead</p>
+				<h3>Áreas de atuação</h3>
+				<p>Veja as áreas de atuações da nossa equipe</p>
 			</div>
 			<div class="w3-agileits-services-grids">
 				<div class="col-md-4 w3-agileits-services-left">
@@ -140,12 +60,8 @@
 				</div>
 				<div class="col-md-8 w3-agileits-services-right">
 					<div class='bar_group'>
-						<div class='bar_group__bar thin elastic' label='Criminal Law' value='230'></div>
-						<div class='bar_group__bar thin elastic' label='Drug Offence' value='160'></div>
-						<div class='bar_group__bar thin elastic' label='Family Law' value='130'></div>
-						<div class='bar_group__bar thin elastic' label='Real Estate Law' value='160'></div>
-						<div class='bar_group__bar thin elastic' label='Personal Law' value='340'></div>
-						<div class='bar_group__bar thin elastic' label='Financial Law' value='290'></div>
+					<? get_template_part('includes/loop', 'area'); ?>
+						
 					</div>
 
 				</div>
@@ -240,42 +156,9 @@
 		</div>
 	</div>
 	<!-- //team -->
-	<!-- contact -->
-	<div class="free_agile_consultation contact">
-		<div class="col-md-6 free_agile_consultaion_img">
-
-
-		</div>
-		<div class="col-md-6 free_consultation_agile">
-			<h4>Free Consultation</h4>
-			<h6>Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae.</h6>
-			<form action="#" method="post">
-				<div class="contact-left agileits-w3layouts free_w3ls_agile">
-					<input type="text" name="First Name" placeholder="First Name" required="">
-					<input class="email" name="Last Name" type="text" placeholder="Last Name" required="">
-					<input type="text" name="Number" placeholder="Mobile Number" required="">
-					<input class="email" name="Email" type="email" placeholder="Email" required="">
-					<select class="form-control">
-								<option>Practice Areas</option>
-								<option value="january">January</option>
-								<option value="february">February</option>
-								<option value="march">March</option>
-								<option value="april">April</option>
-								<option value="may">May</option>
-								<option>Other</option>
-							</select>
-
-					<textarea name="Message" placeholder="Message" required=""></textarea>
-					<input type="submit" value="SEND REQUEST">
-				</div>
-
-			</form>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<!-- //contact -->
+	
 	<!-- offer -->
-	<div class="jarallax offer">
+	<!--<div class="jarallax offer">
 		<div class="agile-dot">
 			<div class="container">
 				<div class="about-heading offer-heading">
@@ -317,27 +200,19 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- //offer -->
 	<!-- contact -->
 	<div class="contact" id="contact">
 		<div class="container">
 			<div class="about-heading">
-				<h3>Contact Us</h3>
-				<p>You Are Always One Step Ahead</p>
+				<h3>Contato</h3>
+				<p>Entre em contato conosco pelo formulário abaixo</p>
 			</div>
 			<div class="w3l-about-grids">
 				<div class="contact-info">
 					<ul>
-						<li><i class="fa fa-location-arrow" aria-hidden="true"></i>
-							<h5>Address<span>Honey 4, 8305, San Francisco</span></h5>
-						</li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i>
-							<h5>Call Us<span>+1 (100)222-0-33</span></h5>
-						</li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i>
-							<h5>Mail Us<span><a href="mailto:info@example.com">info@example.com</a></span></h5>
-						</li>
+						<? get_template_part('includes/loop', 'contato'); ?>
 					</ul>
 				</div>
 				<div class="contact-w3ls-row">
@@ -361,8 +236,7 @@
 	<!-- //contact -->
 	<!-- map -->
 	<div class="agileits-w3layouts-map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783"
-		    class="map" allowfullscreen=""></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3788702096513!2d-43.179631684418545!3d-22.899392443365667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5900b85987%3A0xd5eab2001cc29b78!2sRua+Visconde+de+Inhauma%2C+37+-+21+%C2%BA+andar+-+Centro%2C+Rio+de+Janeiro+-+RJ%2C+20091-007!5e0!3m2!1spt-BR!2sbr!4v1547213884365" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 	<!-- //map -->
 	<? get_footer(); ?>

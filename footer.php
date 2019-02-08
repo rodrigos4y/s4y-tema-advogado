@@ -4,14 +4,13 @@
 			<div class="agileinfo_footer_bottom">
 				<div class="col-md-6 agileinfo_footer_bottom_grid">
 					<h6>Links</h6>
-					<ul class="tag2 tag_agileinfo">
-						<li><a href="#home" class="scroll">Home</a></li>
-						<li><a href="#about" class="scroll">About</a></li>
-						<li><a href="#features" class="scroll">Features</a></li>
-						<li><a href="#team" class="scroll">Team</a></li>
-						<li><a href="#news" class="scroll">News</a></li>
-						<li><a href="#contact" class="scroll">Contact</a></li>
-					</ul>
+					<?
+						wp_nav_menu([
+							'theme_location' => 's4l_rodape',
+							'container' => 'ul',
+							'menu_class' => 'tag2 tag_agileinfo'
+						])
+					?>
 				</div>
 				<div class="col-md-6 agileinfo_footer_bottom_grid">
 					<h6>Follow Us</h6>
