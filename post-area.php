@@ -51,17 +51,17 @@
     }
     function area(){
         global $post;
-        $custom = get_post_custom($post->ID);
-        $area = $custom["area"][0];
-        $valor = $custom["valor"][0];
+
+        $area_title = get_post_meta($post->ID, 'area-title', true);
+        $area_valor = get_post_meta($post->ID, 'area-valor', true);
 ?>
         <p>
             <label>Área: </label>
-            <input name="titulo-area" type="text" value="<? echo $area; ?>">
+            <input name="area-title" type="text" value="<? echo $area_title; ?>">
         </p>
         <p>
             <label>Valor do Conhecimento: </label>
-            <input name="valor-area" type="text" value="<? echo $valor; ?>">
+            <input name="area-valor" type="text" value="<? echo $area_valor; ?>">
         </p>
 <?
     }
@@ -72,8 +72,11 @@
     function save_details_area(){
         global $post;
 
-        update_post_meta($post->ID, "area", $_POST["titulo-area"]);
-        update_post_meta($post->ID, "valor", $_POST["valor-area"]);
+        $area_title = isset($_POST['area-title']) ? $_POST['area-title'] : '';
+        $area_valor = isset($_POST['area-valor']) ? $_POST['area-valor'] : '';
+
+        update_post_meta($post->ID, 'area-title', $area_title);
+        update_post_meta($post->ID, 'area-valor', $area_valor);
     }
 
 ?>

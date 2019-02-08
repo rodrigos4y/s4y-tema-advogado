@@ -2,19 +2,15 @@
     $query = new WP_Query([
         'post_type'   => 'banners'
     ]);
-    while($query->have_posts()) : $query->the_post(); 
+    while($query->have_posts()) : $query->the_post();
+        global $post;
+        $titulo_banner = get_post_meta($post->ID, 'titulo_banner', true);
+        $subtitulo_banner = get_post_meta($post->ID, 'subtitulo_banner', true);
 
 ?>
         <li>
             <div class="agileits-banner-info">
-                <h3><?php
-                    $custom = get_post_custom();
-                    echo $custom["titulo"][0];
-                ?>
-                    <div class="border"></div> <span><?php
-                    $custom = get_post_custom();
-                    echo $custom["subtitulo"][0];
-                ?></span></h3>
+                <h3><?php echo $titulo_banner; ?> <div class="border"></div> <span><?php echo $subtitulo_banner; ?></span></h3>
                 <div class="w3-button">
                     <div class="w3ls-button">
                         <a href="#about" class="scroll hvr-shutter-out-vertical">Sobre</a>
