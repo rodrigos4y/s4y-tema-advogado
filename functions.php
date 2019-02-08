@@ -45,4 +45,5 @@
     require_once('post-banner.php');
     require_once('post-area.php');
     require_once('post-contato.php');
+    require_once('post-sobre.php');
 ?>

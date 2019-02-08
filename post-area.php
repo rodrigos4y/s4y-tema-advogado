@@ -67,7 +67,7 @@
     }
 
     //Salvar os valores no post
-    add_action('save_post', 'save_details_area');
+    
 
     function save_details_area(){
         global $post;
@@ -75,8 +75,12 @@
         $area_title = isset($_POST['area-title']) ? $_POST['area-title'] : '';
         $area_valor = isset($_POST['area-valor']) ? $_POST['area-valor'] : '';
 
-        update_post_meta($post->ID, 'area-title', $area_title);
-        update_post_meta($post->ID, 'area-valor', $area_valor);
+        if($post && $post->post_type && $post->post_type == 'areas') {
+            update_post_meta($post->ID, 'area-title', $area_title);
+            update_post_meta($post->ID, 'area-valor', $area_valor);
+        }
     }
+
+    add_action('save_post', 'save_details_area');
 
 ?>
