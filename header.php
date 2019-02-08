@@ -2,20 +2,10 @@
 <html lang="en">
 
 <head>
-	<title>Legal Adviser a Society and People Category Bootstrap responsive Website Template | Home :: w3layouts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="keywords" content="Legal Adviser Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript">
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
+	<meta charset="<? bloginfo('charset') ?>">
+	<meta name="description" content="<? bloginfo('description') ?>">
+	<meta name="author" content="<? bloginfo('admin_email') ?>">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=1" />
 	
 	<!-- font -->
 	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">

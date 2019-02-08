@@ -25,102 +25,22 @@
 		<div class="container">
 			<div class="w3l-about-grids_inner">
 				<div class="col-md-6 w3ls-about-left">
-					<h2>Welcome to the Legal Adviser</h2>
-					<h6>Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae.</h6>
-					<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. Nullam aliquam erat at lectus ullamcorper, nec interdum
-						neque hendrerit.Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae</p>
-					<p>Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. Nullam aliquam erat at lectus
-						ullamcorper, nec interdum neque hendrerit.</p>
-					<a href="#contact" class="scroll hvr-shutter-out-vertical">Contact</a>
+				<? 
+					$query = new WP_Query([
+						'post_type'   => 'sobre'
+					]);
+					while($query->have_posts()) : $query->the_post(); 
+
+				?>
+					<h2><? the_title(); ?></h2>
+					<? the_content(); ?>
+					<a href="#contact" class="scroll hvr-shutter-out-vertical">Entre em contato</a>
+					<? endwhile; ?>
 				</div>
 				<div class="col-md-6 w3ls-about-right">
 					<img src="<? bloginfo('template_url') ?>/images/ab.jpg" alt=" " class="img-responsive">
 				</div>
 				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //about -->
-	<!-- about -->
-	<div class="why jarallax" id="features">
-		<div class="agile-dot">
-			<div class="container">
-				<div class="about-heading two">
-					<h3>Features</h3>
-					<p>You Are Always One Step Ahead</p>
-				</div>
-				<div class="w3l-about-grids">
-					<div class="col-md-4 w3ls-about-why-us-agile">
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Great Discount</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-heart" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Community Service</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-paper-plane" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Great Discount</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="col-md-4 w3ls-about-right">
-						<div class="w3ls-about-right-img">
-
-						</div>
-					</div>
-					<div class="col-md-4 w3ls-about-why-us-agile">
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Community Service</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-heart" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Great Discount</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="agileits-icon-grid">
-							<div class="icon-left hvr-radial-out">
-								<i class="fa fa-paper-plane" aria-hidden="true"></i>
-							</div>
-							<div class="icon-right">
-								<h5>Community Service</h5>
-								<p>Phasellus dapibus felis elit, sed accumsan arcu gravida vitae. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -236,42 +156,9 @@
 		</div>
 	</div>
 	<!-- //team -->
-	<!-- contact -->
-	<div class="free_agile_consultation contact">
-		<div class="col-md-6 free_agile_consultaion_img">
-
-
-		</div>
-		<div class="col-md-6 free_consultation_agile">
-			<h4>Free Consultation</h4>
-			<h6>Lorem ipsum dolor sit amet,Phasellus dapibus felis elit, sed accumsan arcu gravida vitae.</h6>
-			<form action="#" method="post">
-				<div class="contact-left agileits-w3layouts free_w3ls_agile">
-					<input type="text" name="First Name" placeholder="First Name" required="">
-					<input class="email" name="Last Name" type="text" placeholder="Last Name" required="">
-					<input type="text" name="Number" placeholder="Mobile Number" required="">
-					<input class="email" name="Email" type="email" placeholder="Email" required="">
-					<select class="form-control">
-								<option>Practice Areas</option>
-								<option value="january">January</option>
-								<option value="february">February</option>
-								<option value="march">March</option>
-								<option value="april">April</option>
-								<option value="may">May</option>
-								<option>Other</option>
-							</select>
-
-					<textarea name="Message" placeholder="Message" required=""></textarea>
-					<input type="submit" value="SEND REQUEST">
-				</div>
-
-			</form>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<!-- //contact -->
+	
 	<!-- offer -->
-	<div class="jarallax offer">
+	<!--<div class="jarallax offer">
 		<div class="agile-dot">
 			<div class="container">
 				<div class="about-heading offer-heading">
@@ -313,7 +200,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- //offer -->
 	<!-- contact -->
 	<div class="contact" id="contact">

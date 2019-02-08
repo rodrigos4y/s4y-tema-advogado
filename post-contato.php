@@ -40,10 +40,10 @@
     }
     function contato(){
         global $post;
-        $custom = get_post_custom($post->ID);
-        $endereco = $custom["endereco"][0];
-        $telefone = $custom["telefone"][0];
-        $email = $custom["email"][0];
+        
+        $endereco = get_post_meta($post->ID, 'endereco', true);
+        $telefone = get_post_meta($post->ID, 'telefone', true);
+        $email = get_post_meta($post->ID, 'email', true);
 ?>
         <p>
             <label>Endereço: </label>
@@ -66,9 +66,13 @@
     function save_details_contato(){
         global $post;
 
-        update_post_meta($post->ID, "endereco", $_POST["endereco"]);
-        update_post_meta($post->ID, "telefone", $_POST["telefone"]);
-        update_post_meta($post->ID, "email", $_POST["email"]);
+        $endereco = isset($_POST['endereco']) ? $_POST['endereco'] : '';
+        $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+
+        update_post_meta($post->ID, "endereco", $endereco);
+        update_post_meta($post->ID, "telefone", $telefone);
+        update_post_meta($post->ID, "email", $email);
     }
 
 ?>
