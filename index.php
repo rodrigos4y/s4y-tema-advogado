@@ -88,7 +88,7 @@
 	</div>
 	<!-- //news -->
 	<!-- team -->
-	<div class="team" id="team">
+	<!--<div class="team" id="team">
 		<div class="container">
 			<div class="about-heading two">
 				<h3>Amazing Lawyers</h3>
@@ -154,7 +154,7 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- //team -->
 	
 	<!-- offer -->

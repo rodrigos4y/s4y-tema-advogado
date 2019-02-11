@@ -31,6 +31,17 @@
         wp_enqueue_script('bootstrap-s4l', get_stylesheet_directory_uri() . '/js/bootstrap.js');
     }
 
+    register_sidebar([
+        'name' => 'Barra Lateral',
+        'id' => 's4l-sidebar',
+        'description' => 'Área Lateral',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
+    ]);
+
+    add_theme_support('title-tag');
+    add_theme_support('customize-selective-refresh-widgets');
+
     function s4l_action_init(){
         register_nav_menu('s4l_principal', 'Menu Principal (cabeçalho)');
         register_nav_menu('s4l_rodape', 'Menu Rodapé');
