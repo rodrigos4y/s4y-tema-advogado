@@ -61,7 +61,7 @@
     }
 
     //Salvar os valores no post
-    add_action('save_post', 'save_details_contato');
+    
 
     function save_details_contato(){
         global $post;
@@ -70,9 +70,13 @@
         $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-        update_post_meta($post->ID, "endereco", $endereco);
-        update_post_meta($post->ID, "telefone", $telefone);
-        update_post_meta($post->ID, "email", $email);
+        if($post && $post->post_type && $post->post_type == 'contatos') {
+            update_post_meta($post->ID, "endereco", $endereco);
+            update_post_meta($post->ID, "telefone", $telefone);
+            update_post_meta($post->ID, "email", $email);
+        }
     }
+
+    add_action('save_post', 'save_details_contato');
 
 ?>

@@ -81,9 +81,10 @@ function save_details_banner(){
     $titulo_banner = isset($_POST['titulo_banner']) ? $_POST['titulo_banner'] : '';
     $subtitulo_banner = isset($_POST['subtitulo_banner']) ? $_POST['subtitulo_banner'] : '';
 
-    
-    update_post_meta($post->ID, "titulo_banner", sanitize_text_field($titulo_banner));
-    update_post_meta($post->ID, "subtitulo_banner", sanitize_text_field($subtitulo_banner));
+    if($post && $post->post_type && $post->post_type == 'banners') {
+        update_post_meta($post->ID, 'titulo_banner', sanitize_text_field($titulo_banner));
+        update_post_meta($post->ID, 'subtitulo_banner', sanitize_text_field($subtitulo_banner));
+    }
 }
 
 add_action('save_post', 'save_details_banner');
