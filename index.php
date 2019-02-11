@@ -84,6 +84,7 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>
+			<h5><a href="http://services4lawyer.services4you.com.br/noticias/">Mais notícias</a></h5>
 		</div>
 	</div>
 	<!-- //news -->
@@ -230,6 +231,7 @@
 						<div class="clearfix"> </div>
 					</form>
 				</div>
+				
 			</div>
 		</div>
 	</div>

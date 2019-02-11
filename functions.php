@@ -45,6 +45,7 @@
     function s4l_action_init(){
         register_nav_menu('s4l_principal', 'Menu Principal (cabeçalho)');
         register_nav_menu('s4l_rodape', 'Menu Rodapé');
+        register_nav_menu('s4l_internas', 'Menu das páginas internas');
     }
 
 

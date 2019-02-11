@@ -6,6 +6,8 @@
 	<meta name="description" content="<? bloginfo('description') ?>">
 	<meta name="author" content="<? bloginfo('admin_email') ?>">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=1" />
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	
 	<!-- font -->
 	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -40,13 +42,15 @@
 							</a></h1>
 						</div>
 
+						<h2><? the_title(); ?></h2>
+
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<?
 							wp_nav_menu([
-								'theme_location' => 's4l_principal',
+								'theme_location' => 's4l_internas',
 								'container' => 'ul',
 								'menu_class' => 'nav navbar-nav'
 							])
